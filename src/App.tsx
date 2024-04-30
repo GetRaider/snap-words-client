@@ -1,25 +1,27 @@
-import reactLogo from "./assets/images/react.svg";
-import viteLogo from "/vite.svg";
 import "../App.css";
 import {useState} from "react";
-import {defaultPosts} from "./constants/data.constants.ts";
-import {Header} from "./components/Header.tsx";
+import {defaultCardDecks} from "./constants/data.constants.ts";
+import CardDeckListComponent from "./components/CardDeckList/CardDeckList.component.tsx";
+import {HeaderComponent} from "./components/Header/Header.component.tsx";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import {HomePage} from "./pages/Home/Home.page.tsx";
 
 function App() {
-  const [posts, setPosts] = useState(defaultPosts);
+  const [decks] = useState(defaultCardDecks);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
       <div className={"App"}>
-        <Header />
+        <Router>
+          <HeaderComponent />
+          <Routes>
+            <Route path="/home" element={<HomePage />} />
+            <Route
+              path="/card-deck-list"
+              element={<CardDeckListComponent decks={decks} />}
+            />
+          </Routes>
+        </Router>
       </div>
     </>
   );
