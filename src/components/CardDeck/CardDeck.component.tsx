@@ -1,6 +1,7 @@
 import {useState} from "react";
 
-import {CardComponent, ICard} from "../Card/Card.component.tsx";
+import {CardComponent} from "../Card/Card.component.tsx";
+import {ICardDeckProps} from "./CardDeck.types.ts";
 
 const CardDeckComponent = (props: ICardDeckProps) => {
   const {deck} = props;
@@ -14,7 +15,7 @@ const CardDeckComponent = (props: ICardDeckProps) => {
 
   return (
     <div>
-      <h2>Card Deck with title: {title}</h2>
+      <h2>{title}</h2>
       <button onClick={() => toggleShowCards()}>Show cards</button>
       {showCards &&
         cards.map(card => <CardComponent card={card} key={card.id} />)}
@@ -23,12 +24,3 @@ const CardDeckComponent = (props: ICardDeckProps) => {
 };
 
 export default CardDeckComponent;
-
-interface ICardDeckProps {
-  deck: ICardDeck;
-}
-
-export interface ICardDeck {
-  title: string;
-  cards: ICard[];
-}

@@ -1,4 +1,5 @@
-import CardDeckComponent, {ICardDeck} from "../CardDeck/CardDeck.component.tsx";
+import {ICardDeckListProps} from "./CardDeckList.types.ts";
+import CardDeckComponent from "../CardDeck/CardDeck.component.tsx";
 
 const CardDeckListComponent = (props: ICardDeckListProps) => {
   const {decks} = props;
@@ -14,7 +15,3 @@ const CardDeckListComponent = (props: ICardDeckListProps) => {
 };
 
 export default CardDeckListComponent;
-
-interface ICardDeckListProps {
-  decks: ICardDeck[];
-}

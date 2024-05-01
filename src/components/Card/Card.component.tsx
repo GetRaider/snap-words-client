@@ -1,9 +1,9 @@
 import {JSX} from "react/jsx-runtime";
-import IntrinsicAttributes = JSX.IntrinsicAttributes;
 
 import styles from "./Card.module.css";
+import {ICardProps} from "./Card.types.ts";
 
-export function CardComponent(props: ICardProps): JSX.Element {
+export const CardComponent = (props: ICardProps): JSX.Element => {
   const {card} = props;
   const {id, source, translation} = card;
 
@@ -15,14 +15,4 @@ export function CardComponent(props: ICardProps): JSX.Element {
       </div>
     </div>
   );
-}
-
-interface ICardProps extends IntrinsicAttributes {
-  card: ICard;
-}
-
-export interface ICard {
-  id: number;
-  source: string;
-  translation: string;
-}
+};
