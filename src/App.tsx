@@ -1,9 +1,10 @@
-import "../App.css";
+import "./App.css";
 import {useState} from "react";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+
 import {defaultCardDecks} from "./constants/data.constants.ts";
 import CardDeckListComponent from "./components/CardDeckList/CardDeckList.component.tsx";
 import {HeaderComponent} from "./components/Header/Header.component.tsx";
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import {HomePage} from "./pages/Home/Home.page.tsx";
 
 function App() {
