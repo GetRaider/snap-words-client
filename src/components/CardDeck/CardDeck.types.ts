@@ -5,6 +5,7 @@ export interface ICardDeckProps {
 }
 
 export interface ICardDeck {
+  id: string;
   title: string;
   cards: ICard[];
 }

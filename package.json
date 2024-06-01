@@ -17,6 +17,7 @@
     "@mui/material": "^5.15.15",
     "prettier": "3.2.4",
     "react": "18.2.0",
+    "react-card-flip": "1.2.3",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
@@ -30,6 +31,6 @@
     "eslint-plugin-react-refresh": "0.4.5",
     "react-router-dom": "6.23.0",
     "typescript": "5.2.2",
-    "vite": "5.1.0-beta.2"
+    "vite": "5.0.8"
   }
 }

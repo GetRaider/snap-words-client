@@ -15,6 +15,7 @@ export function HeaderComponent() {
           <ButtonComponent
             variant={ButtonType.contained}
             className={"home_page_button"}
+            dataTestId={"home-button"}
           >
             Home
           </ButtonComponent>

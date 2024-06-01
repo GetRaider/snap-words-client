@@ -1,5 +1,8 @@
-export const defaultCardDecks = [
+import {ICardDeck} from "../components/CardDeck/CardDeck.types.ts";
+
+export const defaultCardDecks: ICardDeck[] = [
   {
+    id: "1",
     title: "Random cards",
     cards: [
       {
@@ -20,6 +23,7 @@ export const defaultCardDecks = [
     ],
   },
   {
+    id: "2",
     title: "A0-Verbs",
     cards: [
       {
