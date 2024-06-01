@@ -11,6 +11,17 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
 
 a {
@@ -48,11 +59,17 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-input {
+input, select, textarea {
+  color: white;
+
   border-radius: 20px;
   border: 2px solid #ffffff;
   padding: 8px;
   margin: 16px;
+}
+
+textarea:focus, input:focus {
+  color: white;
 }
 
 .input:focus {

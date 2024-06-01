@@ -1,15 +1,11 @@
-import "./App.css";
-import {useState} from "react";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
-import {defaultCardDecks} from "./constants/data.constants.ts";
-import CardDeckListComponent from "./components/CardDeckList/CardDeckList.component.tsx";
 import {HeaderComponent} from "./components/Header/Header.component.tsx";
 import {HomePage} from "./pages/Home/Home.page.tsx";
+import {CardDeckListPage} from "./pages/CardDeckList/CardDeckList.page.tsx";
+import {CardDeckViewComponent} from "./components/CardDeckView/CardDeckView.component.tsx";
 
 function App() {
-  const [decks] = useState(defaultCardDecks);
-
   return (
     <>
       <div className={"App"}>
@@ -17,10 +13,8 @@ function App() {
           <HeaderComponent />
           <Routes>
             <Route path="/home" element={<HomePage />} />
-            <Route
-              path="/card-deck-list"
-              element={<CardDeckListComponent decks={decks} />}
-            />
+            <Route path="/card-deck-list" element={<CardDeckListPage />} />
+            <Route path="/decks/:deckId" element={<CardDeckViewComponent />} />
           </Routes>
         </Router>
       </div>

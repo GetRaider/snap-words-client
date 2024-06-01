@@ -1,14 +1,28 @@
+import {useNavigate} from "react-router-dom";
+
+import styles from "./CardDeckList.module.css";
 import {ICardDeckListProps} from "./CardDeckList.types.ts";
-import CardDeckComponent from "../CardDeck/CardDeck.component.tsx";
+import {ButtonComponent} from "../Button/Button.component.tsx";
 
 const CardDeckListComponent = (props: ICardDeckListProps) => {
   const {decks} = props;
 
+  const navigate = useNavigate();
+
+  const handleDeckClick = (deckId: string | number): void => {
+    navigate(`/decks/${deckId}`);
+  };
+
   return (
     <div>
-      <h1>Card Deck List: </h1>
       {decks.map(deck => (
-        <CardDeckComponent deck={deck} />
+        <ButtonComponent
+          className={styles.deck_button}
+          key={deck.id}
+          onClick={() => handleDeckClick(deck.id)}
+        >
+          {deck.title}
+        </ButtonComponent>
       ))}
     </div>
   );
