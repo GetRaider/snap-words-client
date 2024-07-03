@@ -14,9 +14,10 @@ const CardDeckListComponent = (props: ICardDeckListProps) => {
   };
 
   return (
-    <div>
+    <div className={styles.deckContainer}>
       {decks.map(deck => (
         <ButtonComponent
+          dataTestId={`${deck.title}_card-deck-button`}
           className={styles.deck_button}
           key={deck.id}
           onClick={() => handleDeckClick(deck.id)}

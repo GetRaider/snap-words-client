@@ -12,10 +12,18 @@ export const CardComponent = (props: ICardProps): JSX.Element => {
 
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection={"horizontal"}>
-      <button className={styles.front} onClick={() => setFlip(!isFlipped)}>
+      <button
+        data-testid={`source-card-button`}
+        className={styles.front}
+        onClick={() => setFlip(!isFlipped)}
+      >
         {source}
       </button>
-      <button className={styles.back} onClick={() => setFlip(!isFlipped)}>
+      <button
+        data-testid={`translation-card-button`}
+        className={styles.back}
+        onClick={() => setFlip(!isFlipped)}
+      >
         {translation}
       </button>
     </ReactCardFlip>

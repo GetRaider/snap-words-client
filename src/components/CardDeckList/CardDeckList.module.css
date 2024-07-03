@@ -1,3 +1,11 @@
-.deck_button {
-    margin: 5px;
+.deckContainer {
+    display: flex; /* or display: grid; */
+    flex-wrap: wrap; /* Ensure buttons wrap to the next line if needed */
+    gap: 20px; /* Adjust the space between buttons */
+    padding: 20px; /* Optional: Add padding to the container */
+}
+
+.deckButton {
+    margin: 0; /* Ensure no additional margin on individual buttons */
+    /* Optional: Additional button styling */
 }

@@ -1,3 +1,22 @@
+.modal_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: #414141;
+    border: 2px solid #000;
+    box-shadow: 24px;
+    padding: 30px; /* Equivalent to p: 4 which is padding: 4 * 4px */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* This sets the space between the elements */
+}
+
 .card_name_input {
-    margin: 5px;
+    margin: 0; /* Remove individual margin if using gap */
+}
+
+.create_button {
+    margin: 0; /* Ensure the button follows the same spacing */
 }

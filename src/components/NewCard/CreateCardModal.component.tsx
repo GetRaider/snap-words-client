@@ -1,19 +1,8 @@
 import {useState} from "react";
-import {Box, Button, Modal, TextField, Typography} from "@mui/material";
+import {Box, Button, Modal, TextField} from "@mui/material";
 
 import styles from "./CreateCardModal.module.css";
-
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  background: "#1a1a1a",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
+import {ButtonComponent} from "../Button/Button.component.tsx";
 
 export function CreateCardModalComponent() {
   const [open, setOpen] = useState(false);
@@ -22,25 +11,30 @@ export function CreateCardModalComponent() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Create new card</Button>
+      <Button onClick={handleOpen} data-testid={"create-new-card-button"}>
+        Create new card
+      </Button>
       <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+        data-testid={"create-new-word-modal"}
       >
-        <Box sx={style}>
+        <Box className={styles.modal_box}>
           <TextField
             className={styles.card_name_input}
-            variant={"outlined"}
+            variant={"standard"}
             label={"Original"}
+            data-testid={"original-word-input"}
           ></TextField>
           <TextField
             className={styles.card_name_input}
-            variant={"outlined"}
+            variant={"standard"}
             label={"Translation"}
+            data-testid={"translation-word-input"}
           ></TextField>
-          <Button>Create</Button>
+          <ButtonComponent className={"asd"}>Create</ButtonComponent>
         </Box>
       </Modal>
     </div>
