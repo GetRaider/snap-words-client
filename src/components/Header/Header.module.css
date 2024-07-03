@@ -2,27 +2,32 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #333;
+    padding: 0 1em;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 70px;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+.logo_container {
+    display: flex;
+    align-items: center;
 }
 
 .buttons_container {
     display: flex;
     align-items: center;
-    margin-left: 7em;
-}
-
-.logo {
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-    width: 100px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
-}
-
-.logo_container {
-    position: fixed; /* Position the container relative to the viewport */
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
-    z-index: 1000; /* Ensure it's above other content */
+    margin-left: 1em; /* Adjust margin as needed */
 }
 
 .logo:hover {

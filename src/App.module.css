@@ -1,0 +1,16 @@
+/* App.module.css */
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #222; /* Background color for the whole app */
+}
+
+.mainContent {
+    flex-grow: 1;
+    padding: 2em;
+    color: white; /* Text color for main content */
+    overflow-y: auto; /* Ensure content is scrollable if it exceeds viewport height */
+    margin-top: 70px; /* Adjust to match the header height */
+    box-sizing: border-box; /* Include padding in the height */
+}

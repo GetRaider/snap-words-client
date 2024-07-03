@@ -34,7 +34,9 @@ export function CreateCardModalComponent() {
             label={"Translation"}
             data-testid={"translation-word-input"}
           ></TextField>
-          <ButtonComponent className={"asd"}>Create</ButtonComponent>
+          <ButtonComponent className={styles.create_button} onClick={() => {}}>
+            Create
+          </ButtonComponent>
         </Box>
       </Modal>
     </div>

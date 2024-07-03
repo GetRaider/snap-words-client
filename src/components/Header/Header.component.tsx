@@ -1,8 +1,7 @@
 import {Link} from "react-router-dom";
-
 import styles from "./Header.module.css";
-import {ButtonComponent} from "../Button/Button.component.tsx";
-import {ButtonType} from "../Button/Button.types.ts";
+import {ButtonComponent} from "../Button/Button.component";
+import {ButtonType} from "../Button/Button.types";
 
 export function HeaderComponent() {
   return (
